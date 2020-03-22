@@ -2,9 +2,11 @@
   "name": "node-mongo-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean && node app.js",
+    "dev": "cross-env ENV='development' nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +14,9 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2"
   }
 }
